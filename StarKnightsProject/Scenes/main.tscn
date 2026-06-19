@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://bpj832wjtpn2e"]
 
+[ext_resource type="Script" uid="uid://dgluwgkrjudgq" path="res://Battle/main.gd" id="1_8gbba"]
 [ext_resource type="Script" uid="uid://dcoca0lli4ft7" path="res://General_ui/hand.gd" id="2_8gbba"]
 [ext_resource type="PackedScene" uid="uid://gfby7o40uglc" path="res://Scenes/card_ui.tscn" id="3_8gbba"]
 
 [node name="Main" type="Node2D" unique_id=1371145971]
+script = ExtResource("1_8gbba")
 
 [node name="BattleUI" type="CanvasLayer" parent="." unique_id=281321478]
 

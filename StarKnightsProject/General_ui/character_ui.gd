@@ -4,7 +4,8 @@ extends Control
 @export var character: Character
 @onready var sprite: Sprite2D = $Sprite2D
 
-func _ready() -> void:
+func setup(new_character: Character) -> void:
+	character = new_character
 	sprite.texture = character.portrait
 
 func _on_area_2d_mouse_entered() -> void:
@@ -15,3 +16,6 @@ func _on_area_2d_mouse_exited() -> void:
 
 func set_targeted(highlighted: bool) -> void:
 	sprite.modulate = Color.YELLOW if highlighted else Color.WHITE
+
+func _exit_tree() -> void:
+	character = null

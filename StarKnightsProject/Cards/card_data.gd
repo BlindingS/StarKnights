@@ -1,6 +1,8 @@
 class_name CardData
 extends Resource
 
+var name: String
+
 @export var level: int = 1
 
 var damage: int = 0

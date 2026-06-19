@@ -3,7 +3,6 @@ extends Area2D
 
 @export var accepting: bool = true
 
-
 func can_accept_card(card: CardUI) -> bool:
 	return accepting
 	#Can be changed to only accept certain cards

@@ -27,7 +27,6 @@ func _on_mouse_exited() -> void:
 	
 
 
-
 func _on_drop_point_detector_area_entered(area: Area2D) -> void:
 	if area is CardTarget:
 		if area.can_accept_card(self) == true:
@@ -47,3 +46,10 @@ func _on_drop_point_detector_area_exited(area: Area2D) -> void:
 			return
 	else:
 		return
+
+
+
+#Card draw mechanics
+func on_card_drawn() -> void:
+	var card_data : CardData # will be set to a random card from the deck, this includes its level and type
+	
