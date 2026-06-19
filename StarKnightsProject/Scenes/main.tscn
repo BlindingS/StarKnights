@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://bpj832wjtpn2e"]
+
+[ext_resource type="Script" uid="uid://dcoca0lli4ft7" path="res://General_ui/hand.gd" id="2_8gbba"]
+[ext_resource type="PackedScene" uid="uid://gfby7o40uglc" path="res://Scenes/card_ui.tscn" id="3_8gbba"]
+
+[node name="Main" type="Node2D" unique_id=1371145971]
+
+[node name="BattleUI" type="CanvasLayer" parent="." unique_id=281321478]
+
+[node name="Hand" type="HBoxContainer" parent="BattleUI" unique_id=1593282684]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -128.0
+offset_top = -30.0
+offset_right = 128.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 1
+script = ExtResource("2_8gbba")
+metadata/_edit_use_anchors_ = true
+
+[node name="CardUI" parent="BattleUI/Hand" unique_id=2072635517 instance=ExtResource("3_8gbba")]
+layout_mode = 2
+
+[node name="CardUI2" parent="BattleUI/Hand" unique_id=1287432976 instance=ExtResource("3_8gbba")]
+layout_mode = 2
+
+[node name="CardUI3" parent="BattleUI/Hand" unique_id=632612379 instance=ExtResource("3_8gbba")]
+layout_mode = 2
+
+[node name="CardUI4" parent="BattleUI/Hand" unique_id=1351091372 instance=ExtResource("3_8gbba")]
+layout_mode = 2

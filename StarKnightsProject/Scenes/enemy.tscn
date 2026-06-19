@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://wsb75d6ah7he"]
+
+[ext_resource type="Texture2D" uid="uid://b8bq77uq4fif2" path="res://art/tile_0124.png" id="2_287tu"]
+[ext_resource type="Script" uid="uid://b28f71q61wtxb" path="res://General_ui/enemy_target.gd" id="3_0830c"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_temoo"]
+radius = 8.0
+
+[node name="Enemy" type="Node2D" unique_id=401727242]
+
+[node name="CardTarget" type="Area2D" parent="." unique_id=509129788]
+collision_layer = 2
+script = ExtResource("3_0830c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CardTarget" unique_id=1567110653]
+shape = SubResource("CircleShape2D_temoo")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=730231020]
+texture = ExtResource("2_287tu")
