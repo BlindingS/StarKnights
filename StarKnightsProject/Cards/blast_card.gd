@@ -1,55 +1,21 @@
 class_name BlastCard
 extends CardData
 
-const CARDS := {
-	"Blast Rifle": {
-		"damage": 8,
-		"damage_scaling": 4,
-		"shots": 1,
-		"arms": 2
-	},
-	"Blast Pistol": {
-		"damage": 5,
-		"damage_scaling": 3,
-		"shots": 1,
-		"arms": 1
-	},
-	"Blast Cannon": {
-		"damage": 10,
-		"damage_scaling": 5,
-		"shots": 1,
-		"arms": 2
-	},
-	"Double-Blaster": {
-		"damage": 4,
-		"damage_scaling": 3,
-		"shots": 2,
-		"arms": 2
-	}
-}
 
 var base_damage: int
 var damage_scaling: int
 var shots: int
 
-func _init(card_name: String = "") -> void:
-	setup(card_name)
-	
+func _init(definition: Dictionary) -> void:
+	setup(definition)
 
-func setup(card_name: String = "") -> void:
-	if card_name.is_empty():
-		return
 
-	if not CARDS.has(card_name):
-		push_error("Unknown Blast card: " + card_name)
-		return
-
-	var data = CARDS[card_name]
-
-	base_damage = data.damage
-	damage_scaling = data.damage_scaling
-	shots = data.shots
-	arms_needed = data.arms
+func setup(definition: Dictionary) -> void:
+	card_name = definition.name
+	base_damage = definition.damage
+	damage_scaling = definition.damage_scaling
+	shots = definition.shots
+	arms_needed = definition.arms
 
 func play_card(owner: Character) -> void:
 	damage = base_damage + ((level - 1) * damage_scaling)
