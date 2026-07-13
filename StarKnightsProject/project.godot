@@ -21,6 +21,7 @@ battle_manager="*uid://co8aqurp3yo0v"
 card_effects="*uid://d6ogrjmwooby"
 tooltip="*uid://c4wioxs8yakyd"
 card_database="*uid://4plq6esqeekt"
+party_manager="*res://Singletons/Party_manager.gd"
 
 [display]
 

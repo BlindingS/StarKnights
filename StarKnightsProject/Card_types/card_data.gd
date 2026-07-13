@@ -3,6 +3,11 @@ extends Resource
 
 var card_name: String
 
+# Identifies a specific physical card so its permanent-deck and current-deck
+# entries (see CardEntry) can be found and kept in sync, e.g. when an effect
+# upgrades a card in hand and the permanent deck both.
+var instance_id: int = 0
+
 @export var level: int = 1
 
 var damage: int = 0
@@ -10,6 +15,9 @@ var heal: int = 0
 var shield: int = 0
 
 var arms_needed: int = 2
+
+func _init() -> void:
+	instance_id = CardId.generate()
 
 func play_card(owner: Character) -> void:
 	pass
