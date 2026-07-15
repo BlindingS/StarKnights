@@ -1,6 +1,8 @@
 class_name CardData
 extends Resource
 
+signal level_changed(new_level: int)
+
 var card_name: String
 
 # Identifies a specific physical card so its permanent-deck and current-deck
@@ -8,7 +10,10 @@ var card_name: String
 # upgrades a card in hand and the permanent deck both.
 var instance_id: int = 0
 
-@export var level: int = 1
+@export var level: int = 1:
+	set(value):
+		level = value
+		level_changed.emit(level)
 
 var damage: int = 0
 var heal: int = 0

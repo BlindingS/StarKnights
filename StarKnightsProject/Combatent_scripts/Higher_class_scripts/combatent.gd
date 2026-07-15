@@ -1,8 +1,14 @@
 class_name Combatent
 extends Resource
 
-var current_hp: int
-var max_hp: int
+signal hp_changed(current_hp: int, max_hp: int)
+
+var current_hp: int = 0:
+	set(value):
+		current_hp = value
+		hp_changed.emit(current_hp, max_hp)
+
+var max_hp: int = 0
 var combatent_name: String
 var portrait : Texture2D
 

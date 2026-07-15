@@ -22,3 +22,14 @@ shape = SubResource("RectangleShape2D_wn3yd")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1833385555]
 texture = ExtResource("3_ejsiy")
+
+[node name="HPLabel" type="Label" parent="." unique_id=-1174382525]
+layout_mode = 0
+offset_left = -9.0
+offset_top = 8.0
+offset_right = 16.0
+offset_bottom = 31.0
+scale = Vector2(0.7, 0.7)
+text = "0/0"
+horizontal_alignment = 1
+vertical_alignment = 1
