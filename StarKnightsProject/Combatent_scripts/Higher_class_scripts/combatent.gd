@@ -17,6 +17,23 @@ var arms_used: int = 0
 
 var statuses: Array[StatusEffect] = []
 
+func _init(definition: Dictionary = {}) -> void:
+	if not definition.is_empty():
+		setup(definition)
+
+# Reads the fields every combatant family shares (Character, EnemyCombatent).
+# A leaf class configures itself by calling this from its own _init(), e.g.
+# BlasterCharacter and BatrocityEnemy each hardcode their own definition
+# dictionary since, unlike cards, every combatant is its own class. A family
+# with extra fields of its own (see EnemyCombatent.attack_damage) overrides
+# this, calls super(definition), then reads whatever else it needs.
+func setup(definition: Dictionary) -> void:
+	combatent_name = definition.name
+	max_hp = definition.max_hp
+	current_hp = max_hp
+	arm_number = definition.get("arm_number", arm_number)
+	portrait = definition.get("art")
+
 func take_damage(amount: int) -> void:
 	current_hp = max(current_hp - amount, 0)
 

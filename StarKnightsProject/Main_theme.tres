@@ -1,6 +1,6 @@
 [gd_resource type="Theme" format=3 uid="uid://dlmjlkoasyrb7"]
 
-[ext_resource type="FontFile" uid="uid://dskmdk146n4rq" path="res://art/pixel_rpg.ttf" id="1_g3jvk"]
+[ext_resource type="FontFile" uid="uid://dskmdk146n4rq" path="res://Spare_art/pixel_rpg.ttf" id="1_g3jvk"]
 
 [resource]
 default_font = ExtResource("1_g3jvk")

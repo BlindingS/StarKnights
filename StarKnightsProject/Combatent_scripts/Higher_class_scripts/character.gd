@@ -3,6 +3,3 @@ extends Combatent
 
 func _ready() -> void:
 	pass
-	
-
-	

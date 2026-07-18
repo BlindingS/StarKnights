@@ -4,6 +4,7 @@ extends Resource
 signal level_changed(new_level: int)
 
 var card_name: String
+var portrait: Texture2D
 
 # Identifies a specific physical card so its permanent-deck and current-deck
 # entries (see CardEntry) can be found and kept in sync, e.g. when an effect

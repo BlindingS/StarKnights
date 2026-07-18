@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://wsb75d6ah7he"]
 
-[ext_resource type="Texture2D" uid="uid://b8bq77uq4fif2" path="res://art/tile_0124.png" id="2_287tu"]
+[ext_resource type="Texture2D" uid="uid://b8bq77uq4fif2" path="res://Sprite_art/Enemy_art/tile_0124.png" id="2_287tu"]
 [ext_resource type="Script" uid="uid://b28f71q61wtxb" path="res://General_ui/enemy_target.gd" id="3_0830c"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_temoo"]

@@ -59,6 +59,20 @@ func get_front_enemies(count: int) -> Array[Combatent]:
 
 	return targets
 	
+func get_front_characters(count: int) -> Array[Combatent]:
+	var targets: Array[Combatent] = []
+
+	for character in player_team:
+		if character.current_hp <= 0:
+			continue
+
+		targets.append(character)
+
+		if targets.size() >= count:
+			break
+
+	return targets
+
 func get_random_enemies(count: int) -> Array[Combatent]:
 	var alive := get_alive_enemies()
 	var targets: Array[Combatent] = []

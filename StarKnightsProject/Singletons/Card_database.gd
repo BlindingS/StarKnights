@@ -1,26 +1,29 @@
 class_name CardDatabase
 extends Node
 
-const BLAST_CARDS := { # Must add portraits (textures) to the database
+const BLAST_CARDS := {
 	"Blast Rifle": {
 		"damage": 8,
 		"damage_scaling": 4,
 		"shots": 1,
-		"arms": 2
+		"arms": 2,
+		"art": preload("res://Sprite_art/Weapon_art/blast_rifle.png"),
 	},
 
 	"Blast Pistol": {
 		"damage": 5,
 		"damage_scaling": 3,
 		"shots": 1,
-		"arms": 1
+		"arms": 1,
+		"art": preload("res://Sprite_art/Weapon_art/blast_pistol.png"),
 	},
 
 	"Blast Cannon": {
 		"damage": 10,
 		"damage_scaling": 5,
 		"shots": 2,
-		"arms": 2
+		"arms": 2,
+		"art": preload("res://Sprite_art/Weapon_art/blast_canon.png"),
 	},
 }
 

@@ -34,6 +34,17 @@ grow_vertical = 2
 mouse_filter = 2
 color = Color(0.13518435, 0.19522056, 0.43419906, 1)
 
+[node name="Portrait" type="TextureRect" parent="." unique_id=1730584622]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+
 [node name="State" type="Label" parent="." unique_id=1352037652]
 layout_mode = 1
 anchors_preset = 15
@@ -45,16 +56,14 @@ text = "State"
 horizontal_alignment = 1
 vertical_alignment = 2
 
-[node name="Info" type="Label" parent="." unique_id=2810348109]
+[node name="Info" type="Label" parent="." unique_id=-1484619187]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-text = ""
 horizontal_alignment = 1
-vertical_alignment = 0
 autowrap_mode = 2
 
 [node name="DropPointDetector" type="Area2D" parent="." unique_id=923952222]

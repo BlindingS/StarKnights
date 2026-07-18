@@ -16,6 +16,7 @@ func setup(definition: Dictionary) -> void:
 	damage_scaling = definition.damage_scaling
 	shots = definition.shots
 	arms_needed = definition.arms
+	portrait = definition.get("art")
 
 func play_card(owner: Character) -> void:
 	damage = base_damage + ((level - 1) * damage_scaling)

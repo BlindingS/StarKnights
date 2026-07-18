@@ -6,6 +6,7 @@ signal reparent_requested(which_card_ui: CardUI)
 @onready var color: ColorRect = $Color
 @onready var state: Label = $State
 @onready var info: Label = $Info
+@onready var portrait: TextureRect = $Portrait
 @onready var drop_point_detector: Area2D = $DropPointDetector
 @onready var card_state_machine: CardStateMachine = $CardStateMachine as CardStateMachine
 
@@ -26,6 +27,7 @@ func _on_level_changed(_new_level: int) -> void:
 
 func _update_info() -> void:
 	info.text = "%s\nLv%d  Arms:%d" % [card_data.card_name, card_data.level, card_data.arms_needed]
+	portrait.texture = card_data.portrait
 
 func _exit_tree() -> void:
 	if card_data and card_data.level_changed.is_connected(_on_level_changed):
